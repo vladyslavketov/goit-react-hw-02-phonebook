@@ -1,7 +1,8 @@
 import { Component } from "react";
 import PropTypes from 'prop-types';
+import css from '../ContactForm/ContactForm.module.css'
 
-class Form extends Component { 
+class ContactFrom extends Component { 
   state = {
     name: '',
     number: '',
@@ -36,7 +37,7 @@ class Form extends Component {
     
     return (
       <>
-      <form onSubmit={this.handleSubmit}>
+      <form className={css.form} onSubmit={this.handleSubmit}>
         <label>
           Name
           <input
@@ -66,4 +67,4 @@ class Form extends Component {
   };
 }
 
-export default Form;
+export default ContactFrom;

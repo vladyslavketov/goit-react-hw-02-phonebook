@@ -53,14 +53,18 @@ class App extends Component {
     const filtredContacts = this.getFiltredContacts();
 
     return (
-      <>
+      <div
+        style={{
+        padding: "12px 16px",
+      }}
+      >
         <h1>Phonebook</h1>
         <ContactForm onSubmit={this.addContact} />
 
         <h2>Contacts</h2>
         <Filter onChange={this.changeFilter} value={filter}/>
         <ContactsList onDeleteContact={this.deleteContact} contacts={filtredContacts}/>
-      </>
+      </div>
     );
   };
 }
